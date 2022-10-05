@@ -142,7 +142,7 @@ def main():
         for idx, (cropped_face, restored_face) in enumerate(zip(cropped_faces, restored_faces)):
             # save cropped face
             save_crop_path = os.path.join(args.output, 'cropped_faces', f'{basename}_{idx:02d}.png')
-            imwrite(cropped_face, save_crop_path)
+            imwrite(save_crop_path, cropped_face)
             # save restored face
             if args.suffix is not None:
                 save_face_name = f'{basename}_{idx:02d}_{args.suffix}.png'
